@@ -47,22 +47,3 @@ void Dijkstra (vector<vector<double>>& Graph)
         }
     }
 }
-
-int main()
-{
-    int m, n;
-    cout << "Please enter the number of graph nodes and edges:" << endl;
-    cin >> m >> n;
-    vector<vector<double>> weightGraph(m, vector<double>(m, 1000000));
-    cout << "Please enter the undirected edges and weights:" << endl;
-    for (int i = 0; i < n; i++)
-    {
-        int u, v;
-        cin >> u >> v;
-        double w;
-        cin >> w;
-        weightGraph[u][v] = w; 
-        weightGraph[v][u] = w;
-    }
-    Dijkstra(weightGraph);
-}
